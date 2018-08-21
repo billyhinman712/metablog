@@ -6,7 +6,7 @@ router.get('/', function(req, res){
 });
 
 router.get('/new', function(req, res){
-	res.send('new author form goes here');
+	res.render('authors/new');
 });
 
 router.get('/:id', function(req, res){
@@ -14,6 +14,7 @@ router.get('/:id', function(req, res){
 });
 
 router.post('/', function(req, res){
+	console.log(req.body);
 	res.send('/authors POST route reahced');
 });
 

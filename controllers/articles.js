@@ -6,7 +6,7 @@ router.get('/', function(req, res){
 });
 
 router.get('/new', function(req, res){
-	res.send('new article form goes here');
+	res.render('articles/new');
 });
 
 router.get('/:id', function(req, res){

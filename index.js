@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 //include controllers/routers
 app.use('/articles', require('./controllers/articles'));
 app.use('/authors', require('./controllers/authors'));
+app.use('/comments', require('./controllers/comments'));
 
 //define routes
 app.get('/', function(req, res){

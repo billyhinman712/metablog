@@ -1,1 +1,10 @@
 <h1>All Articles</h1>
+
+<% articles.forEach(function(a){ %>
+	<hr>
+	<div>
+		<a href="/articles/<%= a.id %>">
+			<%= a.title %>
+		</a>
+	</div>
+<% }); %>

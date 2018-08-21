@@ -3,7 +3,19 @@
 
 <form method="POST" action="/articles">
 	Title: <input type="text" name="title" class="form-group" required>
-	Author Id: <input type="integer" name="authorId" class="form-group" required>
+	<div class="form-group">
+		Author Id:
+		<select name="authorId" class="form-control">
+			<option value="0">Choose Your name below</option>
+			<% if(authors){ %>
+				<% authors.forEach(function(a){ %>
+				<option value="<%= a.id %>">
+					<%= a.name %>
+				</option>
+				<% }) %>
+			<% } %>
+			</select>
+	</div>
 	Content: <input type="text" name="content" class="form-group" required>
 	<input type="submit" value="Add Article">
 </form>
